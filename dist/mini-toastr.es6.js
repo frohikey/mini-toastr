@@ -167,7 +167,9 @@ const miniToastr = (function () {
   function addElem (node, text, className) {
     const elem = makeNode()
     elem.className = className
-    elem.appendChild(document.createTextNode(text))
+    var element = document.createElement("div")
+    element.innerHTML = text    
+    elem.appendChild(element)
     node.appendChild(elem)
   }
 
